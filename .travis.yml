@@ -1,16 +1,17 @@
+---
 language: python
 python:
-- '2.7'
+  - '2.7'
 sudo: required
 services:
-- docker
+  - docker
 apt_addons: 
 before_install: 
 install:
-- pip install molecule
+  - pip install molecule
 before_script: 
 script:
-- molecule test
+  - molecule test
 after_success: 
 after_failure: 
 deploy: 
