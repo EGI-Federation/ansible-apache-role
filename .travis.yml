@@ -1,0 +1,19 @@
+---
+language: python
+python:
+  - '2.7'
+sudo: required
+services:
+  - docker
+apt_addons:
+before_install:
+install:
+  - pip install molecule
+before_script:
+script:
+  - molecule test
+after_success:
+after_failure:
+deploy:
+after_deploy:
+after_script:
