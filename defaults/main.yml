@@ -1,2 +1,7 @@
 ---
 # defaults file for apache
+prerequisites:
+  debian:
+    - net-tools
+  redhat:
+    - net-tools

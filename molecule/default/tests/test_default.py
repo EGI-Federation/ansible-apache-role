@@ -12,3 +12,10 @@ def test_hosts_file(host):
     assert f.exists
     assert f.user == 'root'
     assert f.group == 'root'
+
+
+def test_ports(host):
+    '''default http ports should be listening'''
+    p = host.socket('tcp://80')
+
+    assert p.is_listening
